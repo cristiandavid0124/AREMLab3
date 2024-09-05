@@ -1,4 +1,4 @@
-# Taller 4 : TALLER DE ARQUITECTURAS DE SERVIDORES DE APLICACIONES, META PROTOCOLOS DE OBJETOS, PATRÓN IOC, REFLEXIÓN
+# Taller 4 : Taller de Arquitecturas de Servidores de Aplicaciones, Meta protocolos de objetos, Patrón IoC, Reflexión
 
 En este taller, el objetivo es construir un servidor web en Java utilizando el framework Spring, el cual permite crear aplicaciones web de una manera sencilla y eficiente. Debe ser capaz de atender solicitudes HTTP y entregar páginas HTML e imágenes.
 
