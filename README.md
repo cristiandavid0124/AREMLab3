@@ -35,11 +35,18 @@ El proyecto contiene:
 
 
 
-## Requisitos previos
 
-[Maven](https://maven.apache.org/) : Con esta herramienta se creo la estructura del proyecto y se manejan las dependencias que se necesitan
+### Requerimientos
 
-[Git](https://git-scm.com/) : Se basa en un sistema de control de versiones distribuido, donde cada desarrollador tiene una copia completa del historial del proyecto.
+*Java: Versión 11 o superior.
+*JDK: Kit de Desarrollo de Java, necesario para compilar y ejecutar el proyecto.
+*IDE: Puedes usar cualquier entorno de desarrollo compatible con Java, como IntelliJ IDEA, Eclipse o NetBeans.
+*Navegador: Cualquier navegador para abrir la aplicación web.
+*Maven: Para construir el proyecto
+
+
+> En este proyecto se utilizo la versión de Java 17 y Maven 4.0.0.
+
 
 Para asegurar una correcta instalación de Maven, es crucial confirmar que la versión del JDK de Java sea compatible. Si el JDK no está actualizado, la instalación de las versiones actuales de Maven podría fallar, generando problemas durante el uso de la herramienta.
 ```
