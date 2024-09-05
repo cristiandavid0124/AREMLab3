@@ -110,8 +110,8 @@ La arquitectura del código se basa en la inversión de control (IoC), lo que si
 
 ## Pruebas Realizadas
 
-- Archivo HTML - Host (En la presente se puede dirigir a la Imagen , Pagina Html (El mismo host) y el saludo)
-![alt text](image.png)
+- Archivo HTML - Host 
+![alt text](img/image4.png)
 
 - Saludo
 ![alt text](img/image-2.png)
@@ -124,7 +124,7 @@ La arquitectura del código se basa en la inversión de control (IoC), lo que si
 ![alt text](img/image-3.png)
 
 - Pruebas unitarias 
-![alt text](img/image-4.png)
+![alt text](img/image.png)
 
 
 
