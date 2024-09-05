@@ -10,16 +10,21 @@ El servidor debe ser capaz de atender múltiples solicitudes no concurrentes y m
 
 El proyecto contiene:
 
+--> En la carpeta [arep](https://github.com/cristiandavid0124/AREMLab3/tree/main/src/main/java/edu/eci/arep).
 
+- La clase HttpServer es un servidor HTTP simple que implementa la inversión de control para mapear rutas HTTP: [HttpServer](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/main/java/edu/eci/arep/HttpServer.java).
+- La clase ServerStarter es la clase principal del servidor web y se encarga de iniciar el servidor HTTP. Utiliza la clase HttpServer, que es un singleton, para crear una instancia del servidor y luego llama al método start para iniciarlo. Está es la clase que va a correr el laboratorio. [ServerStarter](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/main/java/edu/eci/arep/ServerStarter.java).
 
-- La clase HttpServer es un servidor HTTP simple que implementa la inversión de control para mapear rutas HTTP
-- La clase ServerStarter es la clase principal del servidor web y se encarga de iniciar el servidor HTTP. Utiliza la clase HttpServer, que es un singleton, para crear una instancia del servidor y luego llama al método start para iniciarlo. Está es la clase que va a correr el laboratorio. 
+--> En la carpeta [loC](https://github.com/cristiandavid0124/AREMLab3/tree/main/src/main/java/edu/eci/IoC).
 
-- @Component es una anotación personalizada utilizada en el framework IoC (Inversión de Control) para indicar que una clase es un componente.
--   ComponentFileManager Clase que gestiona los archivos del componente 
--  La anotación @GetMapping es una anotación personalizada utilizada en el framework IoC para mapear una URL a un método específico en una clase.
+- @Component es una anotación personalizada utilizada en el framework IoC (Inversión de Control) para indicar que una clase es un componente. [Component](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/main/java/edu/eci/IoC/Component.java).
+-  Clase que gestiona los archivos del componente [ComponentFileManager](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/main/java/edu/eci/IoC/ComponentFileManager.java).
+-  La anotación @GetMapping es una anotación personalizada utilizada en el framework IoC para mapear una URL a un método específico en una clase.[GetMapping](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/main/java/edu/eci/IoC/GetMapping.java).
+- la anotacion @RestController: Es una anotación personalizada que indica que la clase es un controlador RESTful. Esta anotación, similar a @Component en el contexto de Spring, marca a la clase para ser gestionada por el framework IoC para manejar solicitudes HTTP.[RestController](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/main/java/edu/eci/IoC/RestController.java).
+- la anotacion @RequestParam  es una Anotación que marca los parámetros de método que deben ser extraídos de los parámetros de la solicitud HTTP en el contexto de la aplicacion.[RequestParam](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/main/java/edu/eci/IoC/RequestParam.java).
+- GreetingController : Es una clase que actúa como un controlador en el contexto del framework IoC. Está anotada con @RestController, usa greeting(@RequestParam(value = "name", defaultValue = "World") String name): Método que maneja la solicitud HTTP GET a /greeting. Usa @RequestParam para obtener el valor del parámetro name de la solicitud. Si no se proporciona el parámetro name, se utiliza el valor predeterminado "World". Luego, devuelve un saludo formateado con el nombre proporcionado.[GreetingController](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/main/java/edu/eci/IoC/GreetingController.java).
 
---> En la carpeta Resource. contiene los archivos con los cuales se comprueba el funcionamiento pedido
+--> En la carpeta [resource](https://github.com/cristiandavid0124/AREMLab3/tree/main/src/main/resource). contiene los archivos con los cuales se comprueba el funcionamiento pedido
 
 - Archivo PNG [Imagen](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/main/resource/Kit.png)
 - Archivo HTML [Pagina](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/main/resource/PruebaHtml.html)
@@ -27,6 +32,7 @@ El proyecto contiene:
 --> En la carpeta [Pruebas](https://github.com/cristiandavid0124/AREMLab3/tree/main/src/test/java/edu/eci/arep).
 
 - [ComponentFileManagerTest](https://github.com/cristiandavid0124/AREMLab3/blob/main/src/test/java/edu/eci/arep/ComponentFileManagerTest.java). En la presente están las pruebas unitarias planteadas.
+
 
 
 ## Requisitos previos
@@ -53,7 +59,7 @@ git clone https://github.com/cristiandavid0124/AREMLab3.git
 Por consiguiente se debe ingresar al directorio del proyecto 
 
 ```
-cd Taller4_AREP
+cd AREMLab3
 ```
 Ya teniendo lo anterior es momento de compilar con Maven , se debe ejecutar el siguiente el comando
 ```
@@ -79,10 +85,12 @@ Prueba Saludo
 ```
 http://localhost:35000/hello
 ```
-Pagina Local - Home
+Pagina greeting 
 ```
-http://localhost:35000
+http://localhost:35000/greeting
 ```
+
+
 - Par ver la ejecución de las pruebas , se debe usar el siguiente comando dentro del directorio del proyecto
 ```
 mvn test
@@ -103,19 +111,20 @@ La arquitectura del código se basa en la inversión de control (IoC), lo que si
 ## Pruebas Realizadas
 
 - Archivo HTML - Host (En la presente se puede dirigir a la Imagen , Pagina Html (El mismo host) y el saludo)
-
-
-- Página Home
-
+![alt text](image.png)
 
 - Saludo
+![alt text](img/image-2.png)
 
 
 - Archivo PNG 
+![alt text](img/image-1.png)
 
+- Prueba  greeting
+![alt text](img/image-3.png)
 
---> Pruebas unitarias 
-
+- Pruebas unitarias 
+![alt text](img/image-4.png)
 
 
 
